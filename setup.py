@@ -47,7 +47,7 @@ def copy_notebooks():
 check_env()
 #copy_overlay()
 copy_unique_notebooks()
-copy_notebooks()
+#copy_notebooks()
 
 setup(
     name='rfstudio',
