@@ -9,7 +9,7 @@ board = os.environ['BOARD']
 repo_board_folder = f'boards/{board}'
 repo_notebook_folder = f'boards/{board}/notebooks'
 board_notebooks_dir = os.environ['PYNQ_JUPYTER_NOTEBOOKS']
-package_name = 'rfstrath'
+package_name = 'rfstudio'
 hw_data_files = []
 
 # check whether board is supported
@@ -28,16 +28,25 @@ def copy_overlay():
     hw_data_files.extend(
         [os.path.join("..", dst_ol_dir, f) for f in os.listdir(dst_ol_dir)])
 
+# copy unique notebooks to jupyter home
+def copy_unique_notebooks():
+    src_nb_dir = os.path.join(repo_notebook_folder)
+    dst_nb_dir = os.path.join(board_notebooks_dir, 'assets', package_name)
+    if os.path.exists(dst_nb_dir):
+        shutil.rmtree(dst_nb_dir)
+    copy_tree(src_nb_dir, dst_nb_dir)
+
 # copy notebooks to jupyter home
 def copy_notebooks():
-    src_nb_dir = os.path.join(repo_notebook_folder)
-    dst_nb_dir = os.path.join(board_notebooks_dir, package_name)
+    src_nb_dir = os.path.join('notebooks')
+    dst_nb_dir = os.path.join(board_notebooks_dir, 'assets', package_name)
     if os.path.exists(dst_nb_dir):
         shutil.rmtree(dst_nb_dir)
     copy_tree(src_nb_dir, dst_nb_dir)
 
 check_env()
 copy_overlay()
+copy_unique_notebooks()
 copy_notebooks()
 
 setup(

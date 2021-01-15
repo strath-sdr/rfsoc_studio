@@ -1,4 +1,4 @@
-set overlay_name "rfstrath"
+set overlay_name "rfstudio"
 set design_name "block_design"
 
 # Open project

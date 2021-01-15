@@ -1,4 +1,4 @@
-overlay_name := rfstrath
+overlay_name := rfstudio
 design_name := block_design
 
 all: project block_design bitstream
