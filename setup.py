@@ -7,7 +7,8 @@ from setuptools import find_packages, setup
 # global variables
 board = os.environ['BOARD']
 repo_board_folder = f'boards/{board}'
-repo_notebook_folder = f'boards/{board}/notebooks'
+repo_unique_notebook_folder = f'boards/{board}/notebooks'
+repo_notebook_folder = f'notebooks'
 board_notebooks_dir = os.environ['PYNQ_JUPYTER_NOTEBOOKS']
 hw_data_files = []
 
@@ -29,7 +30,7 @@ def copy_overlay():
 
 # copy unique notebooks to jupyter home
 def copy_unique_notebooks():
-    src_nb_dir = os.path.join(repo_notebook_folder)
+    src_nb_dir = os.path.join(repo_unique_notebook_folder)
     dst_nb_dir = os.path.join(board_notebooks_dir, 'rfstudio', 'assets')
     if os.path.exists(dst_nb_dir):
         shutil.rmtree(dst_nb_dir)
@@ -37,7 +38,7 @@ def copy_unique_notebooks():
 
 # copy notebooks to jupyter home
 def copy_notebooks():
-    src_nb_dir = os.path.join('notebooks')
+    src_nb_dir = os.path.join(repo_notebook_folder)
     dst_nb_dir = os.path.join(board_notebooks_dir, 'rfstudio', 'assets')
     if os.path.exists(dst_nb_dir):
         shutil.rmtree(dst_nb_dir)
