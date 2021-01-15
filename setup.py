@@ -53,8 +53,9 @@ setup(
     name=package_name,
     version='1.0',
     install_requires=[
-        'pynq>=2.6',
+        'pynq==2.6',
         'plotly==4.5.2',
+        'git+https://github.com/strath-sdr/rfsoc_sam_private'
     ],
     author="David Northcote",
     packages=find_packages(),
