@@ -52,7 +52,7 @@ setup(
     install_requires=[
         'pynq==2.6',
         'plotly==4.5.2',
-        'rfsoc_sam==1.0',
+        'rfsoc-sam==1.0',
     ],
     dependency_links=[
       'git+https://github.com/dnorthcote/rfsoc_sam_private',
