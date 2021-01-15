@@ -39,7 +39,7 @@ def copy_unique_notebooks():
 # copy notebooks to jupyter home
 def copy_notebooks():
     src_nb_dir = os.path.join(repo_notebook_folder)
-    dst_nb_dir = os.path.join(board_notebooks_dir, 'rfstudio', 'notebooks')
+    dst_nb_dir = os.path.join(board_notebooks_dir, 'rfstudio', 'common_notebooks')
     if os.path.exists(dst_nb_dir):
         shutil.rmtree(dst_nb_dir)
     copy_tree(src_nb_dir, dst_nb_dir)
