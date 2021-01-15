@@ -55,7 +55,7 @@ setup(
         'rfsoc-sam==1.0',
     ],
     dependency_links=[
-        'git+ssh://git@github.com/dnorthcote/rfsoc_sam_private',
+        'git+https://github.com/dnorthcote/rfsoc_sam_private=rfsoc-sam-1.0',
     ],
     author="David Northcote",
     packages=find_packages(),
