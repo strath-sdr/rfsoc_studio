@@ -30,11 +30,11 @@ def copy_overlay():
 
 # copy unique notebooks to jupyter home
 def copy_unique_notebooks():
-    src_nb_dir = os.path.join(repo_unique_notebook_folder)
-    dst_nb_dir = os.path.join(board_notebooks_dir, 'rfstudio')
-    if os.path.exists(dst_nb_dir):
-        shutil.rmtree(dst_nb_dir)
-    copy_tree(src_nb_dir, dst_nb_dir)
+    src_unb_dir = os.path.join(repo_unique_notebook_folder)
+    dst_unb_dir = os.path.join(board_notebooks_dir, 'rfstudio', 'assets')
+    if os.path.exists(dst_unb_dir):
+        shutil.rmtree(dst_unb_dir)
+    copy_tree(src_unb_dir, dst_unb_dir)
 
 # copy notebooks to jupyter home
 def copy_notebooks():
