@@ -6,9 +6,6 @@ from setuptools import find_packages, setup
 
 # global variables
 board = os.environ['BOARD']
-repo_board_folder = f'boards/{board}'
-repo_unique_notebook_folder = f'boards/{board}/notebooks'
-repo_notebook_folder = f'notebooks'
 board_notebooks_dir = os.environ['PYNQ_JUPYTER_NOTEBOOKS']
 hw_data_files = []
 
@@ -22,27 +19,27 @@ def check_env():
 
 # copy overlays to python package
 def copy_overlay():
-    src_ol_dir = os.path.join(repo_board_folder, 'rfstudio', 'overlay')
-    dst_ol_dir = os.path.join('rfstudio')
-    copy_tree(src_ol_dir, dst_ol_dir)
+    src_dir = os.path.join(f'boards/{board}', 'rfstudio', 'overlay')
+    dst_dir = os.path.join('rfstudio')
+    copy_tree(src_dir, dst_dir)
     hw_data_files.extend(
-        [os.path.join("..", dst_ol_dir, f) for f in os.listdir(dst_ol_dir)])
+        [os.path.join("..", dst_dir, f) for f in os.listdir(dst_dir)])
 
 # copy unique notebooks to jupyter home
 def copy_unique_notebooks():
-    src_unb_dir = os.path.join(repo_unique_notebook_folder)
-    dst_unb_dir = os.path.join(board_notebooks_dir, 'rfstudio', 'notebooks')
-    if os.path.exists(dst_unb_dir):
-        shutil.rmtree(dst_unb_dir)
-    copy_tree(src_unb_dir, dst_unb_dir)
+    src_dir = os.path.join(f'boards/{board}/notebooks')
+    dst_dir = os.path.join(board_notebooks_dir, 'rfstudio', 'board_notebooks')
+    if os.path.exists(dst_dir):
+        shutil.rmtree(dst_dir)
+    copy_tree(src_dir, dst_dir)
 
 # copy notebooks to jupyter home
 def copy_notebooks():
-    src_nb_dir = os.path.join(repo_notebook_folder)
-    dst_nb_dir = os.path.join(board_notebooks_dir, 'rfstudio', 'common_notebooks')
-    if os.path.exists(dst_nb_dir):
-        shutil.rmtree(dst_nb_dir)
-    copy_tree(src_nb_dir, dst_nb_dir)
+    src_dir = os.path.join(f'notebooks')
+    dst_dir = os.path.join(board_notebooks_dir, 'rfstudio', 'common_notebooks')
+    if os.path.exists(dst_dir):
+        shutil.rmtree(dst_dir)
+    copy_tree(src_dir, dst_dir)
 
 check_env()
 #copy_overlay()
@@ -61,4 +58,4 @@ setup(
     package_data={
         '': hw_data_files,
     },
-    description="PYNQ RFSoC Strathclyde Template.")
+    description="University of Strathclyde RFSoC Studio.")
