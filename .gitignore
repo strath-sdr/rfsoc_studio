@@ -1,0 +1,18 @@
+# Ignore Logs
+*.log
+
+# Ignore Simulink Files
+*.autosave
+*.slxc
+*\.hbs
+*\.Xil
+*\hdl_prj
+*\slprj
+*\wavedata
+
+# Ignore Vivado Files
+*.jou
+*vivado.txt
+
+# Ignore ./rfstrath/rfstrath/
+**/rfstrath/rfstrath
