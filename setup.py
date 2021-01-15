@@ -58,7 +58,7 @@ setup(
         'rfsoc_sam==1.0',
     ],
     dependency_links=[
-        'https://github.com/strath-sdr/rfsoc_sam_private',
+        'git+https://github.com/strath-sdr/rfsoc_sam_private',
     ],
     author="David Northcote",
     packages=find_packages(),
