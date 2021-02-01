@@ -39,18 +39,9 @@ def copy_common_notebooks():
         shutil.rmtree(dst_dir)
     copy_tree(src_dir, dst_dir)
 
-# copy notebooks from installed packages
-def copy_package_notebooks():
-    for package in package_list:
-        src_dir = os.path.join('/usr', 'local', 'lib', 'python3.6', 'dist-packages', package, 'notebooks')
-        dst_dir = os.path.join(nb_dir, 'strathclyde', package_name, 'package_notebooks', package)
-        #if os.path.exists(src_dir):
-        copy_tree(src_dir, dst_dir)
-
 check_env()
 copy_unique_notebooks()
 copy_common_notebooks()
-copy_package_notebooks()
 
 setup(
     name=package_name,
