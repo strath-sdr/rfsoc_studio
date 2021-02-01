@@ -28,7 +28,7 @@ def copy_unique_notebooks():
     copy_tree(src_dir, dst_dir)
 
 # copy notebooks to jupyter home
-def copy_notebooks():
+def copy_common_notebooks():
     src_dir = os.path.join(f'notebooks')
     dst_dir = os.path.join(nb_dir, 'strathclyde', package_name, 'common_notebooks')
     if os.path.exists(dst_dir):
@@ -40,13 +40,13 @@ def copy_package_notebooks():
     for package in package_list:
         src_dir = os.path.join(nb_dir, package)
         dst_dir = os.path.join(nb_dir, 'strathclyde', package_name, 'package_notebooks')
-        if os.path.exists(dst_dir) and os.path.exists(src_dir):
+        if os.path.exists(src_dir):
             copy_tree(src_dir, dst_dir)
             shutil.rmtree(src_dir)
 
 check_env()
 copy_unique_notebooks()
-copy_notebooks()
+copy_common_notebooks()
 copy_package_notebooks()
 
 setup(
