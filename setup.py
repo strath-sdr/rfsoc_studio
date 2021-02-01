@@ -53,6 +53,9 @@ setup(
         'pynq==2.6',
         'plotly==4.5.2',
         'rfsoc-sam @ git+https://github.com/strath-sdr/rfsoc_sam_private',
+        'rfsoc-ofdm @ git+https://github.com/strath-sdr/rfsoc_ofdm',
+        'rfsoc-qpsk @ git+https://github.com/strath-sdr/rfsoc_qpsk_private',
+        'pystrath-sdr @ git+https://github.com/strath-sdr/sdr_course@refactor'
     ],
     author="David Northcote",
     packages=find_packages(),
