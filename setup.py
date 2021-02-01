@@ -44,8 +44,8 @@ def copy_package_notebooks():
     for package in package_list:
         src_dir = os.path.join(package, 'notebooks')
         dst_dir = os.path.join(nb_dir, 'strathclyde', package_name, 'package_notebooks', package)
-        if os.path.exists(src_dir):
-            copy_tree(src_dir, dst_dir)
+        #if os.path.exists(src_dir):
+        copy_tree(src_dir, dst_dir)
 
 check_env()
 copy_unique_notebooks()
