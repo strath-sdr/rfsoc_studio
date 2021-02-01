@@ -7,6 +7,8 @@ from setuptools import find_packages, setup
 # global variables
 board = os.environ['BOARD']
 nb_dir = os.environ['PYNQ_JUPYTER_NOTEBOOKS']
+package_name = 'rfsoc_studio'
+package_list = ['rfsoc_sam', 'rfsoc_qpsk', 'rfsoc_ofdm', 'pystrath_sdr']
 hw_files = []
 
 # check whether board is supported
@@ -17,18 +19,10 @@ def check_env():
         raise ValueError(
             "Directory {} does not exist.".format(nb_dir))
 
-# copy overlays to python package
-def copy_overlay():
-    src_dir = os.path.join(f'boards/{board}', 'rfstudio', 'overlay')
-    dst_dir = os.path.join('rfstudio')
-    copy_tree(src_dir, dst_dir)
-    hw_files.extend(
-        [os.path.join("..", dst_dir, f) for f in os.listdir(dst_dir)])
-
 # copy unique notebooks to jupyter home
 def copy_unique_notebooks():
     src_dir = os.path.join(f'boards/{board}/notebooks')
-    dst_dir = os.path.join(nb_dir, 'rfstudio', 'board_notebooks')
+    dst_dir = os.path.join(nb_dir, package_name, 'board_notebooks')
     if os.path.exists(dst_dir):
         shutil.rmtree(dst_dir)
     copy_tree(src_dir, dst_dir)
@@ -36,18 +30,27 @@ def copy_unique_notebooks():
 # copy notebooks to jupyter home
 def copy_notebooks():
     src_dir = os.path.join(f'notebooks')
-    dst_dir = os.path.join(nb_dir, 'rfstudio', 'common_notebooks')
+    dst_dir = os.path.join(nb_dir, 'strathclyde', package_name, 'common_notebooks')
     if os.path.exists(dst_dir):
         shutil.rmtree(dst_dir)
     copy_tree(src_dir, dst_dir)
 
+# copy notebooks from installed packages
+def copy_package_notebooks():
+    for package in package_list:
+        src_dir = os.path.join(nb_dir, package)
+        dst_dir = os.path.join(nb_dir, 'strathclyde', package_name, 'package_notebooks')
+        if os.path.exists(dst_dir) and os.path.exists(src_dir):
+            copy_tree(src_dir, dst_dir)
+            shutil.rmtree(src_dir)
+
 check_env()
-#copy_overlay()
 copy_unique_notebooks()
 copy_notebooks()
+copy_package_notebooks()
 
 setup(
-    name='rfstudio',
+    name=package_name,
     version='1.0',
     install_requires=[
         'pynq==2.6',
