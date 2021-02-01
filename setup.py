@@ -40,8 +40,8 @@ def copy_common_notebooks():
 # copy notebooks from installed packages
 def copy_package_notebooks():
     for package in package_list:
-        src_dir = os.path.join(nb_dir, package)
-        dst_dir = os.path.join(nb_dir, 'strathclyde', package_name, 'package_notebooks')
+        src_dir = os.path.join("..", nb_dir, package, 'notebooks')
+        dst_dir = os.path.join(nb_dir, 'strathclyde', package_name, 'package_notebooks', package)
         if os.path.exists(src_dir):
             copy_tree(src_dir, dst_dir)
             shutil.rmtree(src_dir)
