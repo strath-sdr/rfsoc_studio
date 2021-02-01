@@ -6,63 +6,60 @@ from setuptools import find_packages, setup
 
 # global variables
 board = os.environ['BOARD']
-repo_board_folder = f'boards/{board}'
-repo_notebook_folder = f'boards/{board}/notebooks'
-board_notebooks_dir = os.environ['PYNQ_JUPYTER_NOTEBOOKS']
-package_name = 'rfstudio'
-hw_data_files = []
+nb_dir = os.environ['PYNQ_JUPYTER_NOTEBOOKS']
+hw_files = []
 
 # check whether board is supported
 def check_env():
-    if not os.path.isdir(repo_board_folder):
+    if not os.path.isdir(f'boards/{board}'):
         raise ValueError("Board {} is not supported.".format(board))
-    if not os.path.isdir(board_notebooks_dir):
+    if not os.path.isdir(nb_dir):
         raise ValueError(
-            "Directory {} does not exist.".format(board_notebooks_dir))
+            "Directory {} does not exist.".format(nb_dir))
 
 # copy overlays to python package
 def copy_overlay():
-    src_ol_dir = os.path.join(repo_board_folder, package_name, 'overlay')
-    dst_ol_dir = os.path.join(package_name)
-    copy_tree(src_ol_dir, dst_ol_dir)
-    hw_data_files.extend(
-        [os.path.join("..", dst_ol_dir, f) for f in os.listdir(dst_ol_dir)])
+    src_dir = os.path.join(f'boards/{board}', 'rfstudio', 'overlay')
+    dst_dir = os.path.join('rfstudio')
+    copy_tree(src_dir, dst_dir)
+    hw_files.extend(
+        [os.path.join("..", dst_dir, f) for f in os.listdir(dst_dir)])
 
 # copy unique notebooks to jupyter home
 def copy_unique_notebooks():
-    src_nb_dir = os.path.join(repo_notebook_folder)
-    dst_nb_dir = os.path.join(board_notebooks_dir, 'assets', package_name)
-    if os.path.exists(dst_nb_dir):
-        shutil.rmtree(dst_nb_dir)
-    copy_tree(src_nb_dir, dst_nb_dir)
+    src_dir = os.path.join(f'boards/{board}/notebooks')
+    dst_dir = os.path.join(nb_dir, 'rfstudio', 'board_notebooks')
+    if os.path.exists(dst_dir):
+        shutil.rmtree(dst_dir)
+    copy_tree(src_dir, dst_dir)
 
 # copy notebooks to jupyter home
 def copy_notebooks():
-    src_nb_dir = os.path.join('notebooks')
-    dst_nb_dir = os.path.join(board_notebooks_dir, 'assets', package_name)
-    if os.path.exists(dst_nb_dir):
-        shutil.rmtree(dst_nb_dir)
-    copy_tree(src_nb_dir, dst_nb_dir)
+    src_dir = os.path.join(f'notebooks')
+    dst_dir = os.path.join(nb_dir, 'rfstudio', 'common_notebooks')
+    if os.path.exists(dst_dir):
+        shutil.rmtree(dst_dir)
+    copy_tree(src_dir, dst_dir)
 
 check_env()
-copy_overlay()
+#copy_overlay()
 copy_unique_notebooks()
 copy_notebooks()
 
 setup(
-    name=package_name,
+    name='rfstudio',
     version='1.0',
     install_requires=[
         'pynq==2.6',
         'plotly==4.5.2',
-        'git+https://github.com/strath-sdr/rfsoc_sam_private',
-        'git+https://github.com/strath-sdr/rfsoc_ofdm',
-        'git+https://github.com/strath-sdr/rfsoc_qpsk_private',
-        'git+https://github.com/strath-sdr/sdr_course@refactor'
+        'rfsoc-sam @ git+https://github.com/strath-sdr/rfsoc_sam_private',
+        'rfsoc-ofdm @ git+https://github.com/strath-sdr/rfsoc_ofdm',
+        'rfsoc-qpsk @ git+https://github.com/strath-sdr/rfsoc_qpsk_private',
+        'pystrath-sdr @ git+https://github.com/strath-sdr/sdr_course@refactor'
     ],
     author="David Northcote",
     packages=find_packages(),
     package_data={
-        '': hw_data_files,
+        '': hw_files,
     },
-    description="PYNQ RFSoC Strathclyde Template.")
+    description="University of Strathclyde RFSoC Studio.")
