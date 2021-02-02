@@ -14,10 +14,10 @@ Connect to the board with **Jupyter Lab** in a browser (not Jupyter Notebook) by
 
 Open a terminal in Jupyter Lab and run the following command:
 ```sh
-pip3 install git+https://github.com/strath-sdr/rfsoc-studio
+pip3 install git+https://github.com/strath-sdr/rfsoc_studio
 ```
 
-The notebook should now be available in the `rfstudio` folder in your Jupyter Workspace.
+The notebooks should now be available in the `strath-sdr/rfsoc-studio` folder in your Jupyter Workspace.
 It is important that you use the Chrome web browser if possible as rendering performance is important.
 
 ## ZCU111 Setup
@@ -35,7 +35,7 @@ The following software is required to use the project files in this repository.
 ### Vivado
 This project can be built with Vivado from the command line. Open Vivado 2020.1 and execute the following into the tcl console:
 ```sh
-cd /<repository-location>/rfsoc-studio/boards/<board-name>/
+cd /<repository-location>/boards/<board-name>/rfsoc_studio
 make project
 make block_design
 make bitstream
