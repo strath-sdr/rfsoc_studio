@@ -20,13 +20,13 @@ def check_env():
     if not os.path.isdir(nb_dir):
         raise ValueError(
             "Directory {} does not exist.".format(nb_dir))
-    if os.path.exists(os.path.join(nb_dir, 'strathclyde')):
-        shutil.rmtree(os.path.join(nb_dir, 'strathclyde'))
+    if os.path.exists(os.path.join(nb_dir, 'strath-sdr')):
+        shutil.rmtree(os.path.join(nb_dir, 'strath-sdr'))
 
 # copy unique notebooks to jupyter home
 def copy_unique_notebooks():
     src_dir = os.path.join(f'boards/{board}/notebooks')
-    dst_dir = os.path.join(nb_dir, 'strathclyde', package_name, 'board_notebooks')
+    dst_dir = os.path.join(nb_dir, 'strath-sdr', pip_name, 'board_notebooks')
     if os.path.exists(dst_dir):
         shutil.rmtree(dst_dir)
     copy_tree(src_dir, dst_dir)
@@ -34,7 +34,7 @@ def copy_unique_notebooks():
 # copy notebooks to jupyter home
 def copy_common_notebooks():
     src_dir = os.path.join(f'notebooks')
-    dst_dir = os.path.join(nb_dir, 'strathclyde', package_name, 'common_notebooks')
+    dst_dir = os.path.join(nb_dir, 'strath-sdr', pip_name, 'common_notebooks')
     if os.path.exists(dst_dir):
         shutil.rmtree(dst_dir)
     copy_tree(src_dir, dst_dir)
