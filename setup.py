@@ -24,7 +24,7 @@ def check_env():
 # copy unique notebooks to jupyter home
 def copy_unique_notebooks():
     src_dir = os.path.join(f'boards/{board}/notebooks')
-    dst_dir = os.path.join(nb_dir, 'strath-sdr', pip_name, 'board_notebooks')
+    dst_dir = os.path.join(nb_dir, 'strath-sdr', pip_name, 'notebooks', 'board')
     if os.path.exists(dst_dir):
         shutil.rmtree(dst_dir)
     copy_tree(src_dir, dst_dir)
@@ -32,7 +32,7 @@ def copy_unique_notebooks():
 # copy notebooks to jupyter home
 def copy_common_notebooks():
     src_dir = os.path.join(f'notebooks')
-    dst_dir = os.path.join(nb_dir, 'strath-sdr', pip_name, 'common_notebooks')
+    dst_dir = os.path.join(nb_dir, 'strath-sdr', pip_name, 'notebooks', 'common')
     if os.path.exists(dst_dir):
         shutil.rmtree(dst_dir)
     copy_tree(src_dir, dst_dir)
