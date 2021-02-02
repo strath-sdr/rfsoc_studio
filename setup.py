@@ -7,6 +7,10 @@ from setuptools import find_packages, setup
 # global variables
 board = os.environ['BOARD']
 nb_dir = os.environ['PYNQ_JUPYTER_NOTEBOOKS']
+package_name = 'rfsoc_studio'
+pip_name = 'rfsoc-studio'
+package_list = ['rfsoc_sam', 'rfsoc_qpsk', 'rfsoc_ofdm', 'pystrath_sdr']
+pip_list = ['rfsoc-sam', 'rfsoc-qpsk', 'rfsoc-ofdm', 'pystrath-sdr']
 hw_files = []
 
 # check whether board is supported
@@ -17,45 +21,36 @@ def check_env():
         raise ValueError(
             "Directory {} does not exist.".format(nb_dir))
 
-# copy overlays to python package
-def copy_overlay():
-    src_dir = os.path.join(f'boards/{board}', 'rfstudio', 'overlay')
-    dst_dir = os.path.join('rfstudio')
-    copy_tree(src_dir, dst_dir)
-    hw_files.extend(
-        [os.path.join("..", dst_dir, f) for f in os.listdir(dst_dir)])
-
 # copy unique notebooks to jupyter home
 def copy_unique_notebooks():
     src_dir = os.path.join(f'boards/{board}/notebooks')
-    dst_dir = os.path.join(nb_dir, 'rfstudio', 'board_notebooks')
+    dst_dir = os.path.join(nb_dir, 'strath-sdr', pip_name, 'notebooks', 'board')
     if os.path.exists(dst_dir):
         shutil.rmtree(dst_dir)
     copy_tree(src_dir, dst_dir)
 
 # copy notebooks to jupyter home
-def copy_notebooks():
+def copy_common_notebooks():
     src_dir = os.path.join(f'notebooks')
-    dst_dir = os.path.join(nb_dir, 'rfstudio', 'common_notebooks')
+    dst_dir = os.path.join(nb_dir, 'strath-sdr', pip_name, 'notebooks', 'common')
     if os.path.exists(dst_dir):
         shutil.rmtree(dst_dir)
     copy_tree(src_dir, dst_dir)
 
 check_env()
-#copy_overlay()
 copy_unique_notebooks()
-copy_notebooks()
+copy_common_notebooks()
 
 setup(
-    name='rfstudio',
+    name=package_name,
     version='1.0',
     install_requires=[
-        'pynq==2.6',
         'plotly==4.5.2',
-        'rfsoc-sam @ git+https://github.com/strath-sdr/rfsoc_sam_private',
+        'pynq==2.6',
+        'pystrath-sdr @ git+https://github.com/strath-sdr/sdr_course@refactor',
         'rfsoc-ofdm @ git+https://github.com/strath-sdr/rfsoc_ofdm',
         'rfsoc-qpsk @ git+https://github.com/strath-sdr/rfsoc_qpsk_private',
-        'pystrath-sdr @ git+https://github.com/strath-sdr/sdr_course@refactor'
+        'rfsoc-sam @ git+https://github.com/strath-sdr/rfsoc_sam_private'
     ],
     author="David Northcote",
     packages=find_packages(),
