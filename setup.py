@@ -47,7 +47,7 @@ setup(
     install_requires=[
         'plotly==4.5.2',
         'pynq==2.6',
-        'pystrath-sdr @ git+https://github.com/strath-sdr/sdr_course@refactor',
+        'pystrath-sdr @ git+https://github.com/strath-sdr/sdr_course',
         'rfsoc-ofdm @ git+https://github.com/strath-sdr/rfsoc_ofdm',
         'rfsoc-qpsk @ git+https://github.com/strath-sdr/rfsoc_qpsk_private',
         'rfsoc-sam @ git+https://github.com/strath-sdr/rfsoc_sam_private'
