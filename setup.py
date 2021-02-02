@@ -49,8 +49,8 @@ setup(
         'pynq==2.6',
         'pystrath-sdr @ git+https://github.com/strath-sdr/sdr_course@refactor',
         'rfsoc-ofdm @ git+https://github.com/strath-sdr/rfsoc_ofdm',
-        'rfsoc-qpsk==1.2 @ git+https://github.com/strath-sdr/rfsoc_qpsk_private',
-        'rfsoc-sam==0.2 @ git+https://github.com/strath-sdr/rfsoc_sam_private'
+        'rfsoc-qpsk @ git+https://github.com/strath-sdr/rfsoc_qpsk_private',
+        'rfsoc-sam @ git+https://github.com/strath-sdr/rfsoc_sam_private'
     ],
     author="David Northcote",
     packages=find_packages(),
