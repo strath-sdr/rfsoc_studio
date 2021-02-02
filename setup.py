@@ -20,8 +20,6 @@ def check_env():
     if not os.path.isdir(nb_dir):
         raise ValueError(
             "Directory {} does not exist.".format(nb_dir))
-    if os.path.exists(os.path.join(nb_dir, 'strath-sdr')):
-        shutil.rmtree(os.path.join(nb_dir, 'strath-sdr'))
 
 # copy unique notebooks to jupyter home
 def copy_unique_notebooks():
