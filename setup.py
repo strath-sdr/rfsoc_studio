@@ -37,9 +37,16 @@ def copy_common_notebooks():
         shutil.rmtree(dst_dir)
     copy_tree(src_dir, dst_dir)
 
+# copy getting started notebooks
+def copy_package_notebooks():
+    src_dir = os.path.join(f'boards/{board}/getting_started')
+    dst_dir = os.path.join(nb_dir, 'strath-sdr')
+    copy_tree(src_dir, dst_dir)
+
 check_env()
 copy_unique_notebooks()
 copy_common_notebooks()
+copy_package_notebooks()
 
 setup(
     name=package_name,
