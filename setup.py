@@ -9,9 +9,11 @@ board = os.environ['BOARD']
 nb_dir = os.environ['PYNQ_JUPYTER_NOTEBOOKS']
 package_name = 'rfsoc_studio'
 pip_name = 'rfsoc-studio'
+
+repo_board_folder = f'boards/{board}/{package_name}'
 package_list = ['rfsoc_sam', 'rfsoc_qpsk', 'rfsoc_ofdm', 'pystrath_sdr', 'pynq_agc']
 pip_list = ['rfsoc-sam', 'rfsoc-qpsk', 'rfsoc-ofdm', 'pystrath-sdr', 'pynq_agc']
-hw_files = []
+data_files = []
 
 # check whether board is supported
 def check_env():
@@ -43,10 +45,28 @@ def copy_package_notebooks():
     dst_dir = os.path.join(nb_dir, 'strath-sdr')
     copy_tree(src_dir, dst_dir)
 
+# copy board specific drivers
+def copy_drivers():
+    src_dr_dir = os.path.join(repo_board_folder, 'drivers')
+    dst_dr_dir = os.path.join(package_name)
+    copy_tree(src_dr_dir, dst_dr_dir)
+    data_files.extend(
+        [os.path.join("..", dst_dr_dir, f) for f in os.listdir(dst_dr_dir)])
+    
+# copy overlays to python package
+def copy_overlays():
+    src_ol_dir = os.path.join(repo_board_folder, 'bitstream')
+    dst_ol_dir = os.path.join(package_name, 'bitstream')
+    copy_tree(src_ol_dir, dst_ol_dir)
+    data_files.extend(
+        [os.path.join("..", dst_ol_dir, f) for f in os.listdir(dst_ol_dir)])
+
 check_env()
 copy_unique_notebooks()
 copy_common_notebooks()
 copy_package_notebooks()
+copy_drivers()
+copy_overlays()
 
 setup(
     name=package_name,
@@ -63,6 +83,6 @@ setup(
     author="David Northcote",
     packages=find_packages(),
     package_data={
-        '': hw_files,
+        '': data_files,
     },
     description="University of Strathclyde RFSoC Studio.")
