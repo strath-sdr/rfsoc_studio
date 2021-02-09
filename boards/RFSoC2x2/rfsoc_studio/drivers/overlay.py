@@ -3,9 +3,7 @@ __organisation__ = "The University of Strathclyde"
 
 import os
 import xrfclk
-import xrfdc
-import pynq
-import pynq.lib
+from pynq import Overlay
 from .hierarchies import *
 
 
