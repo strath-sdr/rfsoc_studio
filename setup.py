@@ -12,7 +12,7 @@ pip_name = 'rfsoc-studio'
 repo_board_folder = f'boards/{board}/{package_name}'
 package_list = ['rfsoc_sam', 'rfsoc_qpsk', 'rfsoc_ofdm', 'pystrath_sdr']
 pip_list = ['rfsoc-sam', 'rfsoc-qpsk', 'rfsoc-ofdm', 'pystrath-sdr']
-hw_files = []
+data_files = []
 
 # check whether board is supported
 def check_env():
@@ -81,6 +81,6 @@ setup(
     author="David Northcote",
     packages=find_packages(),
     package_data={
-        '': hw_files,
+        '': data_files,
     },
     description="University of Strathclyde RFSoC Studio.")
