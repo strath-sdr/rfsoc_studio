@@ -12,7 +12,7 @@ pip_name = 'rfsoc-studio'
 
 repo_board_folder = f'boards/{board}/{package_name}'
 package_list = ['rfsoc_sam', 'rfsoc_qpsk', 'rfsoc_ofdm', 'pystrath_sdr', 'pynq_agc']
-pip_list = ['rfsoc-sam', 'rfsoc-qpsk', 'rfsoc-ofdm', 'pystrath-sdr', 'pynq_agc']
+pip_list = ['rfsoc-sam', 'rfsoc-qpsk', 'rfsoc-ofdm', 'pystrath-sdr', 'pynq-agc']
 data_files = []
 
 # check whether board is supported
