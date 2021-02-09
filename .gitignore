@@ -16,3 +16,4 @@
 
 # Ignore ./rfstrath/rfstrath/
 **/rfstrath/rfstrath
+**/rfsoc_studio/rfsoc_studio
