@@ -9,10 +9,9 @@ board = os.environ['BOARD']
 nb_dir = os.environ['PYNQ_JUPYTER_NOTEBOOKS']
 package_name = 'rfsoc_studio'
 pip_name = 'rfsoc-studio'
-
 repo_board_folder = f'boards/{board}/{package_name}'
-package_list = ['rfsoc_sam', 'rfsoc_qpsk', 'rfsoc_ofdm', 'pystrath_sdr', 'pynq_agc']
-pip_list = ['rfsoc-sam', 'rfsoc-qpsk', 'rfsoc-ofdm', 'pystrath-sdr', 'pynq-agc']
+package_list = ['rfsoc_sam', 'rfsoc_qpsk', 'rfsoc_ofdm', 'pystrath_sdr']
+pip_list = ['rfsoc-sam', 'rfsoc-qpsk', 'rfsoc-ofdm', 'pystrath-sdr']
 data_files = []
 
 # check whether board is supported
@@ -77,8 +76,7 @@ setup(
         'pystrath-sdr @ git+https://github.com/strath-sdr/sdr_course',
         'rfsoc-ofdm @ git+https://github.com/strath-sdr/rfsoc_ofdm',
         'rfsoc-qpsk @ git+https://github.com/strath-sdr/rfsoc_qpsk_private',
-        'rfsoc-sam @ git+https://github.com/strath-sdr/rfsoc_sam_private',
-        'pynq_agc @ https://cramsay.co.uk/content/images/2021/02/pynq_agc.tar.gz'
+        'rfsoc-sam @ git+https://github.com/strath-sdr/rfsoc_sam_private'
     ],
     author="David Northcote",
     packages=find_packages(),
