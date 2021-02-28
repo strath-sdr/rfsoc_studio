@@ -25,7 +25,12 @@ setup(
     install_requires=[
         'plotly==4.5.2',
         'pynq==2.6',
-        'pystrath-rfsoc @ git+https://github.com/strath-sdr/rfsoc_notebooks@v0.1.0'
+        'pystrath-rfsoc @ git+https://github.com/strath-sdr/rfsoc_notebooks@v0.1.0',
+        'rfsoc-freqplan @ git+https://github.com/strath-sdr/rfsoc_frequency_planner@v0.1.0',
+        'rfsoc-ofdm @ git+https://github.com/strath-sdr/rfsoc_ofdm@v0.2.0',
+        'rfsoc-qpsk @ git+https://github.com/strath-sdr/rfsoc_qpsk@v1.3.0',
+        'rfsoc-sam @ git+https://github.com/strath-sdr/rfsoc_sam@v0.2.1',
+        'pynq-agc @ https://github.com/strath-sdr/pynq_agc/releases/download/v0.3/pynq_agc.tar.gz'
     ],
     author="David Northcote",
     packages=find_packages(),
