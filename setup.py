@@ -21,7 +21,7 @@ check_env()
 
 setup(
     name=package_name,
-    version='1.0',
+    version='0.1',
     install_requires=[
         'pystrath-rfsoc @ git+https://github.com/strath-sdr/rfsoc_notebooks@v0.1.0',
         'rfsoc-freqplan @ git+https://github.com/strath-sdr/rfsoc_frequency_planner@v0.1.0',
