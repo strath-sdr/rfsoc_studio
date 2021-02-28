@@ -25,7 +25,7 @@ setup(
     install_requires=[
         'plotly==4.5.2',
         'pynq==2.6',
-        'pystrath-rfsoc==0.1 @ git+https://github.com/strath-sdr/rfsoc_notebooks#egg=v0.1.0'
+        'pystrath-rfsoc @ git+https://github.com/strath-sdr/rfsoc_notebooks@v0.1.0'
     ],
     author="David Northcote",
     packages=find_packages(),
