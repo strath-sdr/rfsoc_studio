@@ -23,8 +23,6 @@ setup(
     name=package_name,
     version='1.0',
     install_requires=[
-        'plotly==4.5.2',
-        'pynq==2.6',
         'pystrath-rfsoc @ git+https://github.com/strath-sdr/rfsoc_notebooks@v0.1.0',
         'rfsoc-freqplan @ git+https://github.com/strath-sdr/rfsoc_frequency_planner@v0.1.0',
         'rfsoc-ofdm @ git+https://github.com/strath-sdr/rfsoc_ofdm@v0.2.0',
