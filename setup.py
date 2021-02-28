@@ -25,8 +25,8 @@ setup(
     install_requires=[
         'plotly==4.5.2',
         'pynq==2.6',
-        'pystrath-rfsoc==0.1 @ git+https://github.com/strath-sdr/rfsoc_notebooks@v0.1.0'
-        'rfsoc-freqplan==0.1 @ git+https://github.com/strath-sdr/rfsoc_frequency_planner@v0.1.0'
+        'pystrath-rfsoc==0.1 @ git+https://github.com/strath-sdr/rfsoc_notebooks@v0.1.0',
+        'rfsoc-freqplan==0.1 @ git+https://github.com/strath-sdr/rfsoc_frequency_planner@v0.1.0',
         'rfsoc-ofdm==0.2 @ git+https://github.com/strath-sdr/rfsoc_ofdm@v0.2.0',
         'rfsoc-qpsk==1.3 @ git+https://github.com/strath-sdr/rfsoc_qpsk@v1.3.0',
         'rfsoc-sam==0.2 @ git+https://github.com/strath-sdr/rfsoc_sam@v0.2.1',
