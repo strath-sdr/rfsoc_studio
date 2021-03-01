@@ -23,11 +23,7 @@ setup(
     name=package_name,
     version='0.1',
     install_requires=[
-        'pystrath-rfsoc @ git+https://github.com/strath-sdr/rfsoc_notebooks@v0.1.0',
-        'rfsoc-freqplan @ git+https://github.com/strath-sdr/rfsoc_frequency_planner@v0.1.0',
-        'rfsoc-ofdm @ git+https://github.com/strath-sdr/rfsoc_ofdm@v0.2.0',
-        'rfsoc-qpsk @ git+https://github.com/strath-sdr/rfsoc_qpsk@v1.3.0',
-        'rfsoc-sam @ git+https://github.com/strath-sdr/rfsoc_sam@v0.2.1'
+        'git+https://github.com/strath-sdr/rfsoc_sam@v0.2.1#egg=rfsoc-sam --install-option="--force-reinstall --no-deps"'
     ],
     author="David Northcote",
     packages=find_packages(),
