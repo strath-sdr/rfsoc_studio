@@ -20,7 +20,7 @@ def check_env():
         raise ValueError("Board {} is not supported.".format(board))
 
 def install(package, version):
-    subprocess.check_call(["pip3", "install", "https://github.com/strath-sdr/rfsoc_sam@v0.2.2"])
+    subprocess.check_call(["pip3", "install", "git+https://github.com/strath-sdr/rfsoc_sam@v0.2.2"])
 
 check_env()
 install("rfsoc_sam", "v0.2.2")
