@@ -1,50 +1,22 @@
-<img src="https://www.strath.ac.uk/media/1newwebsite/webteam/logos/xUoS_Logo_Horizontal.png.pagespeed.ic.M6gv_BmDx1.png" width="350">
+<img src="strathclyde_banner.png" width="100%">
 
-# \<Full Repository Name\>
+# The Strathclyde RFSoC Studio
+This repository is only compatible with [PYNQ images v2.6](https://github.com/Xilinx/PYNQ/releases) for the [ZCU111](https://www.xilinx.com/products/boards-and-kits/zcu111.html) and [RFSoC2x2](http://rfsoc-pynq.io/).
 
 ## Introduction
-Add a brief introduction that describes the repository and any associated work i.e. papers, other datasets.
+This repository contains the RFSoC Studio installer, which will install the following demonstration and notebook projects onto your RFSoC development board:
+* RFSoC Spectrum Analyzer
+* RFSoC Frequency Planner
+* OFDM Demonstrator
+* QPSK Demonstrator
+* BPSK Demonstrator
+* PYNQ Automatic Gain Control
+* DSP Notebooks for Wireless Communications
+* RFSoC Introductory Notebooks
 
-<Add a .gif demonstrating a part of the work.>
-
-## Quick Start
-This repository is only compatible with [PYNQ images v2.6 and greater](https://github.com/Xilinx/PYNQ/releases) for the [ZCU111](https://www.xilinx.com/products/boards-and-kits/zcu111.html) and the [RFSoC2x2]().
-
-Connect to the board with **Jupyter Lab** in a browser (not Jupyter Notebook) by using a web browser `https://<IP address>:9090/lab`.
-
-Open a terminal in Jupyter Lab and run the following command:
-```sh
-pip3 install git+https://github.com/strath-sdr/rfsoc_studio
-```
-
-The notebooks should now be available in the `strath-sdr/rfsoc-studio` folder in your Jupyter Workspace.
-It is important that you use the Chrome web browser if possible as rendering performance is important.
-
-## ZCU111 Setup
-Describe the setup for the ZCU111.
-
-## RFSoC2x2 Setup
-Describe the setup for the RFSoC2x2.
-
-## Using the Project Files
-The following software is required to use the project files in this repository.
-- Vivado Design Suite 2020.1
-- System Generator for DSP
-- MATLAB 2020a
-
-### Vivado
-This project can be built with Vivado from the command line. Open Vivado 2020.1 and execute the following into the tcl console:
-```sh
-cd /<repository-location>/boards/<board-name>/rfsoc_studio
-make project
-make block_design
-make bitstream
-```
-
-Alternatively, you can run the entire project build by executing the following into the tcl console:
-```sh
-make all
-```
+<p align="center">
+  <img src="./demonstration.gif" width="400"/>
+<p/>
 
 ## License
 [BSD 3-Clause](/LICENSE)
