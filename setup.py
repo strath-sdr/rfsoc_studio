@@ -31,8 +31,8 @@ setup(
         'rfsoc-qpsk @ git+https://github.com/strath-sdr/rfsoc_qpsk@v1.3.0',
         'rfsoc-radio @ git+https://github.com/strath-sdr/rfsoc_radio@v0.1.0',
         'pynq-agc @ https://github.com/strath-sdr/pynq_agc/releases/download/v0.3/pynq_agc.tar.gz',
-        'pystrath-dsp @ https://github.com/strath-sdr/dsp_notebooks@v0.1.0',
-        'pystrath-rfsoc @ https://github.com/strath-sdr/rfsoc_notebooks@v0.1.0'
+        'pystrath-dsp @ git+https://github.com/strath-sdr/dsp_notebooks@v0.1.0',
+        'pystrath-rfsoc @ git+https://github.com/strath-sdr/rfsoc_notebooks@v0.1.0'
     ],
     author="David Northcote",
     packages=find_packages(),
