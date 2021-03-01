@@ -23,7 +23,7 @@ setup(
     name=package_name,
     version='0.1',
     install_requires=[
-        'rfsoc-sam @ git+https://github.com/strath-sdr/rfsoc_sam@v0.2.1 --install-option="--force-reinstall --no-deps"'
+        'git+https://github.com/strath-sdr/rfsoc_sam@v0.2.1 --install-option="--force-reinstall --no-deps"',
     ],
     author="David Northcote",
     packages=find_packages(),
