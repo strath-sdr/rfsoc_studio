@@ -27,7 +27,7 @@ setup(
     install_requires=[
         'plotly==4.5.2',
         'pynq==2.6',
-        'rfsoc-sam @ git+https://github.com/strath-sdr/rfsoc_sam@v0.2.2'
+        'rfsoc-sam=="0.2.2" @ git+https://github.com/strath-sdr/rfsoc_sam@v0.2.2'
     ],
     author="David Northcote",
     packages=find_packages(),
