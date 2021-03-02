@@ -19,7 +19,7 @@ def check_env():
 
 # copy notebooks into jupyter home
 def copy_notebooks():
-    src_nb_dir = os.path.join(repo_board_folder, 'notebooks')
+    src_nb_dir = os.path.join('notebooks')
     dst_nb_dir = os.path.join(nb_dir, pip_name)
     if os.path.exists(dst_nb_dir):
         shutil.rmtree(dst_nb_dir)
