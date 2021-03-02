@@ -7,7 +7,7 @@ This repository is only compatible with [PYNQ images v2.6](https://github.com/Xi
 This repository contains the RFSoC Studio installer, which will install several demonstrations and notebooks onto your RFSoC development board.
 
 <figure align="center">
-    <img src="demo_one.jpg" width="100%"/>
+    <img src="demo_spectrum_analyser.jpg" width="100%"/>
 </figure>
 
 [RFSoC Spectrum Analyser](https://github.com/strath-sdr/rfsoc_sam)
@@ -16,7 +16,7 @@ This repository contains the RFSoC Studio installer, which will install several 
 <br>
 
 <figure align="center">
-    <img src="demo_four.jpg" width="100%"/>
+    <img src="demo_frequency_planner.jpg" width="100%"/>
 </figure>
 
 [RFSoC Frequency Planner](https://github.com/strath-sdr/rfsoc_frequency_planner)
@@ -50,13 +50,13 @@ Follow the instructions below to install the RFSoC Studio on your development bo
   <img src="../master/open_terminal_window.jpg" width="50%" height="50%" />
 <p/>
 
-Now follow lets ensure all packages are uninstalled.
+* Firstly, ensure all packages are uninstalled.
 
 ```sh
 pip3 uninstall -y rfsoc-sam rfsoc-freqplan rfsoc-ofdm rfsoc-qpsk rfsoc-radio pynq-agc pystrath-dsp pystrath-rfsoc
 ```
 
-We can now install the RFSoC Studio. This will install all of the above projects and notebooks, and will also add a few additional notebooks.
+* We can now install the RFSoC Studio. This will install all of the above projects and notebooks, and will also add a few additional notebooks.
 
 ```sh
 pip3 install git+https://github.com/strath-sdr/rfsoc_studio
