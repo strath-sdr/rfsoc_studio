@@ -56,7 +56,7 @@ Now follow lets ensure all packages are uninstalled.
 pip3 uninstall -y rfsoc-sam rfsoc-freqplan rfsoc-ofdm rfsoc-qpsk rfsoc-radio pynq-agc pystrath-dsp pystrath-rfsoc
 ```
 
-We can now install the RFSoC Studio. This will install all of the above projects and notebooks, and will also add few additional notebooks.
+We can now install the RFSoC Studio. This will install all of the above projects and notebooks, and will also add a few additional notebooks.
 
 ```sh
 pip3 install git+https://github.com/strath-sdr/rfsoc_studio
@@ -70,10 +70,10 @@ Please complete installation by following the board specific instructions below.
 The RFSoC2x2 does not require any additional setup.
 
 ## ZCU111 Setup
-The ZCU111 requires an xrfdc patch, xrfclk patch, and optional Voila installation. Please follow the instructions below.
+The ZCU111 requires an xrfdc patch and xrfclk patch. An optional Voila installation is required if you would like to use voila-dashboards. Please follow the instructions below.
 
 ### The xrfdc Patch
-It is absolutely essential that the xrfdc package is patched. This procedure will overwrite the xrfdc's `__init__.py`. You will not lose any current xrfdc functionality. You will gain thresholding capabilities and fabric read and write register configuration.
+It is absolutely essential that the xrfdc package is patched. This procedure will overwrite the xrfdc's `__init__.py`. You will not lose any current xrfdc functionality. You will gain thresholding capabilities and fabric read and write register configurations for the RF Data Converters.
 
 In the terminal window, run the following script:
 ```sh
