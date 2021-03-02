@@ -41,19 +41,19 @@ Follow the instructions below to install the RFSoC Studio on your development bo
 * We need to open a terminal in Jupyter Lab. Firstly, open a launcher window as shown in the figure below:
 
 <p align="center">
-  <img src="../master/open_jupyter_launcher.jpg" width="50%" height="50%" />
+  <img src="open_jupyter_launcher.jpg" width="50%" height="50%" />
 <p/>
 
 * Now open a terminal in Jupyter as illustrated below:
 
 <p align="center">
-  <img src="../master/open_terminal_window.jpg" width="50%" height="50%" />
+  <img src="open_terminal_window.jpg" width="50%" height="50%" />
 <p/>
 
 * Firstly, ensure all packages are uninstalled.
 
 ```sh
-pip3 uninstall -y rfsoc-sam rfsoc-freqplan rfsoc-ofdm rfsoc-qpsk rfsoc-radio pynq-agc pystrath-dsp pystrath-rfsoc
+pip3 uninstall -y rfsoc-sam rfsoc-freqplan rfsoc-ofdm rfsoc-qpsk rfsoc-radio pynq-agc pystrath-dsp pystrath-rfsoc rfsoc-studio
 ```
 
 * We can now install the RFSoC Studio. This will install all of the above projects and notebooks, and will also add a few additional notebooks.
@@ -98,6 +98,56 @@ cp /home/xilinx/GitHub/ZCU111-PYNQ/ZCU111/packages/xrfclk/pkg/xrfclk/__init__.py
 
 ### Voila Installation (Optional)
 Many of the strath-sdr projects use Voila to create simple web applications using Jupyter notebooks. If you would like to use Voila on your ZCU111 development board, simply follow the instructions outlined in this [blog post](https://strath-sdr.github.io/pynq/linux/zynq/fpga/voila/2021/02/22/install-voila-on-pynq-v2-6.html). This is optional and not required to use the demonstrators.
+
+## Troubleshooting
+Please see below for support on installation issues and problems.
+
+### The Installer Crashed During Download
+
+>_Issue_ <br>
+The installer crashed during package download. Jupyter Lab disconnects. A connected serial terminal reports kernel panic.
+
+> _Resolution_ <br>
+Ensure you are not using a SanDisk Extreme Pro SD Card and follow the installation instructions again.
+Otherwise, install each of the packages individually following the [individual installation instructions](#individual_install).
+
+### The Installer Crashed During Installation
+
+> _Issue_ <br>
+The installer crashed during package installation. Jupyter Lab disconnects. No report on the serial terminal.
+
+> _Resolution_ <br>
+Install each of the packages individually following the [individual installation instructions](#individual_install).
+
+## Individual Package Installation <a class="anchor" id="individual_install"></a>
+If you have a problem using the RFSoC-Studio installer, please run the following in your Jupyter Terminal.
+
+* Firstly, ensure all packages are uninstalled.
+
+```sh
+pip3 uninstall -y rfsoc-sam rfsoc-freqplan rfsoc-ofdm rfsoc-qpsk rfsoc-radio pynq-agc pystrath-dsp pystrath-rfsoc rfsoc-studio
+```
+
+* Then run individual installation for each package.
+
+```sh
+pip3 install https://github.com/strath-sdr/rfsoc_sam/archive/v0.2.2.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_frequency_planner/archive/v0.1.0.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_ofdm/archive/v0.2.0.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_qpsk/archive/v1.3.0.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_radio/archive/v0.1.0.tar.gz
+pip3 install https://github.com/strath-sdr/dsp_notebooks/archive/v0.1.0.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_notebooks/archive/v0.1.0.tar.gz
+pip3 install https://github.com/strath-sdr/pynq_agc/releases/download/v0.3/pynq_agc.tar.gz
+```
+
+* Finally run the rfsoc-studio installer again to complete setup.
+
+```sh
+pip3 install git+https://github.com/strath-sdr/rfsoc_studio
+```
+
+All required packages should now be installed.
 
 ## License
 [BSD 3-Clause](/LICENSE)
