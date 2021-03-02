@@ -48,6 +48,4 @@ setup(
     package_data={
         '': data_files,
     },
-    description="University of Strathclyde RFSoC Studio.")
-
-# 
+    description="The Strathclyde RFSoC Studio for PYNQ.")
