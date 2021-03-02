@@ -11,8 +11,6 @@ This repository contains the RFSoC Studio installer, which will install several 
 </figure>
 
 [RFSoC Spectrum Analyser](https://github.com/strath-sdr/rfsoc_sam)
-
-<br>
 <br>
 
 <figure align="center">
@@ -20,8 +18,6 @@ This repository contains the RFSoC Studio installer, which will install several 
 </figure>
 
 [RFSoC Frequency Planner](https://github.com/strath-sdr/rfsoc_frequency_planner)
-
-<br>
 <br>
 
 Other demonstrations include:
