@@ -34,14 +34,14 @@ setup(
     install_requires=[
         'plotly==4.5.2',
         'pynq==2.6',
-        'rfsoc-sam @ git+https://github.com/strath-sdr/rfsoc_sam@v0.2.2',
-        'rfsoc-freqplan @ git+https://github.com/strath-sdr/rfsoc_frequency_planner@v0.1.0',
-        'rfsoc-ofdm @ git+https://github.com/strath-sdr/rfsoc_ofdm@v0.2.0',
-        'rfsoc-qpsk @ git+https://github.com/strath-sdr/rfsoc_qpsk@v1.3.0',
-        'rfsoc-radio @ git+https://github.com/strath-sdr/rfsoc_radio@v0.1.0',
+        'rfsoc-sam @ https://github.com/strath-sdr/rfsoc_sam/archive/v0.2.2.tar.gz',
+        'rfsoc-freqplan @ https://github.com/strath-sdr/rfsoc_frequency_planner/archive/v0.1.0.tar.gz',
+        'rfsoc-ofdm @ https://github.com/strath-sdr/rfsoc_ofdm/archive/v0.2.0.tar.gz',
+        'rfsoc-qpsk @ https://github.com/strath-sdr/rfsoc_qpsk/archive/v1.3.0.tar.gz',
+        'rfsoc-radio @ https://github.com/strath-sdr/rfsoc_radio/archive/v0.1.0.tar.gz',
         'pynq-agc @ https://github.com/strath-sdr/pynq_agc/releases/download/v0.3/pynq_agc.tar.gz',
-        'pystrath-dsp @ git+https://github.com/strath-sdr/dsp_notebooks@v0.1.0',
-        'pystrath-rfsoc @ git+https://github.com/strath-sdr/rfsoc_notebooks@v0.1.0'
+        'pystrath-dsp @ https://github.com/strath-sdr/dsp_notebooks/archive/v0.1.0.tar.gz',
+        'pystrath-rfsoc @ https://github.com/strath-sdr/rfsoc_notebooks/archive/v0.1.0.tar.gz'
     ],
     author="David Northcote",
     packages=find_packages(),
