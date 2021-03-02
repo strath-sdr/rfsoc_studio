@@ -40,7 +40,8 @@ setup(
         'rfsoc-qpsk @ https://github.com/strath-sdr/rfsoc_qpsk/archive/v1.3.0.tar.gz',
         'rfsoc-radio @ https://github.com/strath-sdr/rfsoc_radio/archive/v0.1.0.tar.gz',
         'pystrath-dsp @ https://github.com/strath-sdr/dsp_notebooks/archive/v0.1.0.tar.gz',
-        'pystrath-rfsoc @ https://github.com/strath-sdr/rfsoc_notebooks/archive/v0.1.0.tar.gz'
+        'pystrath-rfsoc @ https://github.com/strath-sdr/rfsoc_notebooks/archive/v0.1.0.tar.gz',
+        'pynq-agc @ https://github.com/strath-sdr/pynq_agc/releases/download/v0.3/pynq_agc.tar.gz'
     ],
     author="David Northcote",
     packages=find_packages(),
@@ -49,4 +50,4 @@ setup(
     },
     description="University of Strathclyde RFSoC Studio.")
 
-# 'pynq-agc @ https://github.com/strath-sdr/pynq_agc/releases/download/v0.3/pynq_agc.tar.gz',
+# 
