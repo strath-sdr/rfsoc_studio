@@ -119,6 +119,15 @@ The installer crashed during package installation. Jupyter Lab disconnects. No r
 > _Resolution_ <br>
 Install each of the packages individually following the [individual installation instructions](#individual_install).
 
+### Individual Installer BadZipFile
+
+> _Issue_ <br>
+You are using the individual installer workflow and encountered the message `zipfile.BadZipFile: File is not a zip file`. Installation will not proceed, even after executing the installation command again, due to pip cache.
+
+> _Resolution_ <br>
+Simply add `--no-cache-dir` at the end of the installation command. For example: <br>
+`pip3 install https://github.com/strath-sdr/pynq_agc/releases/download/v0.3/pynq_agc.tar.gz --no-cache-dir`
+
 ## Individual Package Installation <a class="anchor" id="individual_install"></a>
 If you have a problem using the RFSoC-Studio installer, please run the following in your Jupyter Terminal.
 
