@@ -76,7 +76,7 @@ pip3 uninstall -y rfsoc-sam rfsoc-freqplan rfsoc-ofdm rfsoc-qpsk rfsoc-radio pyn
 * We can now install the RFSoC Studio. This will install all of the above projects and notebooks, and will also add a few additional notebooks.
 
 ```sh
-pip3 install git+https://github.com/strath-sdr/rfsoc_studio
+pip3 install git+https://github.com/strath-sdr/rfsoc_studio@v0.2.0
 ```
 
 Once the installation has complete, your Jupyter home workspace will be populated with several folders installed by each package. You can access the `rfsoc-studio` folder and open the getting started notebook to begin using all of the demonstrations and educational resources.
