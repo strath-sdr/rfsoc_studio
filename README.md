@@ -8,11 +8,11 @@ This repository contains the RFSoC Studio installer, which will install several 
 
 <table border="0" align="center">
     <tr>
-        <td align="center" width="43.5%">
-            <img src="demo_spectrum_analyser.gif" alt="oscthumb" style="width: 100%"/>
+        <td align="center" width="43.5%" border="0">
+            <img src="demo_spectrum_analyser.gif" alt="oscthumb" style="width: 100%" border="0"/>
         </td>
-        <td align="center" width="50%">
-            <img src="demo_ofdm.gif" alt="oscthumb" style="width: 100%"/>
+        <td align="center" width="50%" border="0">
+            <img src="demo_ofdm.gif" alt="oscthumb" style="width: 100%" border="0"/>
         </td>
     </tr>
 </table>
