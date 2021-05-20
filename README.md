@@ -1,4 +1,4 @@
-<img src="strathclyde_banner.png" width="100%"/>
+<img src="strathsdr_banner.png" />
 
 # The Strathclyde RFSoC Studio
 This repository is only compatible with [PYNQ images v2.6](https://github.com/Xilinx/PYNQ/releases) for the [ZCU111](https://www.xilinx.com/products/boards-and-kits/zcu111.html) and [RFSoC2x2](http://rfsoc-pynq.io/).
@@ -6,23 +6,19 @@ This repository is only compatible with [PYNQ images v2.6](https://github.com/Xi
 ## Introduction
 This repository contains the RFSoC Studio installer, which will install several demonstrations and notebooks onto your RFSoC development board.
 
-<figure align="center">
-    <img src="demo_spectrum_analyser.jpg" width="100%"/>
-</figure>
+<p float="center">
+    <img src="demo_spectrum_analyser.gif" width="46%"/>
+    <img src="demo_ofdm.gif" width="53.3%"/>
+    <img src="demo_qpsk.gif" width="48%"/>
+    <img src="demo_bpsk.gif" width="51.5%"/>
+    <img src="demo_agc.gif" width="38%"/>
+    <img src="demo_frequency_planner.gif" width="61.5%"/>
+    
+</p>
 
-[RFSoC Spectrum Analyser](https://github.com/strath-sdr/rfsoc_sam)
-
-<br>
-
-<figure align="center">
-    <img src="demo_frequency_planner.jpg" width="100%"/>
-</figure>
-
-[RFSoC Frequency Planner](https://github.com/strath-sdr/rfsoc_frequency_planner)
-
-<br>
-
-Other demonstrations include:
+RFSoC Tools and SDR demonstrations include:
+* [RFSoC Spectrum Analyser](https://github.com/strath-sdr/rfsoc_sam)
+* [RFSoC Frequency Planner](https://github.com/strath-sdr/rfsoc_frequency_planner)
 * [OFDM Demonstrator](https://github.com/strath-sdr/rfsoc_ofdm)
 * [QPSK Demonstrator](https://github.com/strath-sdr/rfsoc_qpsk)
 * [BPSK Demonstrator](https://github.com/strath-sdr/rfsoc_radio)
