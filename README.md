@@ -7,12 +7,32 @@ This repository is only compatible with [PYNQ images v2.6](https://github.com/Xi
 This repository contains the RFSoC Studio installer, which will install several demonstrations and notebooks onto your RFSoC development board.
 
 <table border="0" align="center">
-    <tr>
+    <tr border="0">
         <td align="center" width="43.5%" border="0">
             <img src="demo_spectrum_analyser.gif" alt="oscthumb" style="width: 100%" border="0"/>
         </td>
         <td align="center" width="50%" border="0">
             <img src="demo_ofdm.gif" alt="oscthumb" style="width: 100%" border="0"/>
+        </td>
+    </tr>
+</table>
+<table border="0" align="center">
+    <tr border="0">
+        <td align="center" width="48%" border="0">
+            <img src="demo_qpsk.gif" alt="oscthumb" style="width: 100%" border="0"/>
+        </td>
+        <td align="center" width="52%" border="0">
+            <img src="demo_bpsk.gif" alt="oscthumb" style="width: 100%" border="0"/>
+        </td>
+    </tr>
+</table>
+<table border="0" align="center">
+    <tr border="0">
+        <td align="center" width="38.5%" border="0">
+            <img src="demo_agc.gif" alt="oscthumb" style="width: 100%" border="0"/>
+        </td>
+        <td align="center" width="61.5%" border="0">
+            <img src="demo_frequency_planner.gif" alt="oscthumb" style="width: 100%" border="0"/>
         </td>
     </tr>
 </table>
