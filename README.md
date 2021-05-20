@@ -1,4 +1,4 @@
-<img src="strathclyde_banner.png" width="100%"/>
+<img src="strathsdr_banner.png" />
 
 # The Strathclyde RFSoC Studio
 This repository is only compatible with [PYNQ images v2.6](https://github.com/Xilinx/PYNQ/releases) for the [ZCU111](https://www.xilinx.com/products/boards-and-kits/zcu111.html) and [RFSoC2x2](http://rfsoc-pynq.io/).
@@ -6,23 +6,42 @@ This repository is only compatible with [PYNQ images v2.6](https://github.com/Xi
 ## Introduction
 This repository contains the RFSoC Studio installer, which will install several demonstrations and notebooks onto your RFSoC development board.
 
-<figure align="center">
-    <img src="demo_spectrum_analyser.jpg" width="100%"/>
-</figure>
-
-[RFSoC Spectrum Analyser](https://github.com/strath-sdr/rfsoc_sam)
+<table border="0" align="center">
+    <tr border="0">
+        <td align="center" width="43.5%" border="0">
+            <img src="notebooks/images/gif/rfsoc_sam.gif" alt="oscthumb" style="width: 100%" border="0"/>
+        </td>
+        <td align="center" width="50%" border="0">
+            <img src="notebooks/images/gif/rfsoc_ofdm.gif" alt="oscthumb" style="width: 100%" border="0"/>
+        </td>
+    </tr>
+</table>
+<table border="0" align="center">
+    <tr border="0">
+        <td align="center" width="48%" border="0">
+            <img src="notebooks/images/gif/rfsoc_qpsk.gif" alt="oscthumb" style="width: 100%" border="0"/>
+        </td>
+        <td align="center" width="52%" border="0">
+            <img src="notebooks/images/gif/rfsoc_radio.gif" alt="oscthumb" style="width: 100%" border="0"/>
+        </td>
+    </tr>
+</table>
+<table border="0" align="center">
+    <tr border="0">
+        <td align="center" width="38.5%" border="0">
+            <img src="notebooks/images/gif/pynq_agc.gif" alt="oscthumb" style="width: 100%" border="0"/>
+        </td>
+        <td align="center" width="61.5%" border="0">
+            <img src="notebooks/images/gif/rfsoc_frequency_planner.gif" alt="oscthumb" style="width: 100%" border="0"/>
+        </td>
+    </tr>
+</table>
 
 <br>
 
-<figure align="center">
-    <img src="demo_frequency_planner.jpg" width="100%"/>
-</figure>
-
-[RFSoC Frequency Planner](https://github.com/strath-sdr/rfsoc_frequency_planner)
-
-<br>
-
-Other demonstrations include:
+RFSoC Tools and SDR demonstrations include:
+* [RFSoC Spectrum Analyser](https://github.com/strath-sdr/rfsoc_sam)
+* [RFSoC Frequency Planner](https://github.com/strath-sdr/rfsoc_frequency_planner)
 * [OFDM Demonstrator](https://github.com/strath-sdr/rfsoc_ofdm)
 * [QPSK Demonstrator](https://github.com/strath-sdr/rfsoc_qpsk)
 * [BPSK Demonstrator](https://github.com/strath-sdr/rfsoc_radio)
@@ -57,7 +76,7 @@ pip3 uninstall -y rfsoc-sam rfsoc-freqplan rfsoc-ofdm rfsoc-qpsk rfsoc-radio pyn
 * We can now install the RFSoC Studio. This will install all of the above projects and notebooks, and will also add a few additional notebooks.
 
 ```sh
-pip3 install git+https://github.com/strath-sdr/rfsoc_studio
+pip3 install git+https://github.com/strath-sdr/rfsoc_studio@v0.2.0
 ```
 
 Once the installation has complete, your Jupyter home workspace will be populated with several folders installed by each package. You can access the `rfsoc-studio` folder and open the getting started notebook to begin using all of the demonstrations and educational resources.
@@ -124,7 +143,7 @@ You are using the individual installer workflow and encountered the message `zip
 
 > _Resolution_ <br>
 Simply add `--no-cache-dir` at the end of the installation command. For example: <br>
-`pip3 install https://github.com/strath-sdr/pynq_agc/releases/download/v0.3/pynq_agc.tar.gz --no-cache-dir`
+`pip3 install https://github.com/strath-sdr/pynq_agc/releases/download/v0.3.1/pynq_agc.tar.gz --no-cache-dir`
 
 ## Individual Package Installation <a class="anchor" id="individual_install"></a>
 If you have a problem using the RFSoC-Studio installer, please run the following in your Jupyter Terminal.
@@ -138,14 +157,14 @@ pip3 uninstall -y rfsoc-sam rfsoc-freqplan rfsoc-ofdm rfsoc-qpsk rfsoc-radio pyn
 * Then run individual installation for each package.
 
 ```sh
-pip3 install https://github.com/strath-sdr/rfsoc_sam/archive/v0.2.2.tar.gz
-pip3 install https://github.com/strath-sdr/rfsoc_frequency_planner/archive/v0.1.0.tar.gz
-pip3 install https://github.com/strath-sdr/rfsoc_ofdm/archive/v0.2.0.tar.gz
-pip3 install https://github.com/strath-sdr/rfsoc_qpsk/archive/v1.3.0.tar.gz
-pip3 install https://github.com/strath-sdr/rfsoc_radio/archive/v0.1.0.tar.gz
-pip3 install https://github.com/strath-sdr/dsp_notebooks/archive/v0.1.0.tar.gz
-pip3 install https://github.com/strath-sdr/rfsoc_notebooks/archive/v0.1.0.tar.gz
-pip3 install https://github.com/strath-sdr/pynq_agc/releases/download/v0.3/pynq_agc.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_sam/archive/v0.3.1.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_frequency_planner/archive/v0.1.1.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_ofdm/archive/v0.2.2.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_qpsk/archive/v1.3.1.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_radio/archive/v0.1.2.tar.gz
+pip3 install https://github.com/strath-sdr/dsp_notebooks/archive/v0.1.1.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_notebooks/archive/v0.1.1.tar.gz
+pip3 install https://github.com/strath-sdr/pynq_agc/releases/download/v0.3.1/pynq_agc.tar.gz
 ```
 
 * Finally run the rfsoc-studio installer again to complete setup.
