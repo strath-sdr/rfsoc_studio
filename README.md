@@ -6,16 +6,21 @@ This repository is only compatible with [PYNQ images v2.6](https://github.com/Xi
 ## Introduction
 This repository contains the RFSoC Studio installer, which will install several demonstrations and notebooks onto your RFSoC development board.
 
-<table>
-  <tr>
-    <td><img src="demo_spectrum_analyser.gif" width="96.5%"/></td>
-    <td><img src="demo_ofdm.gif" width="100%"/></td>
-  </tr>
-  <tr>
-    <td><img src="demo_qpsk.gif" width="100%"/></td>
-    <td><img src="demo_bpsk.gif" width="97.5%"/></td>
+<br>
+<table align="center" border="none" cellspacing="0" cellpadding="0">
+  <tr align="center">
+    <td align="center"><img src="demo_spectrum_analyser.gif" width="96.5%" align="center"/></td>
+    <td align="center"><img src="demo_ofdm.gif" width="60%" align="center"/></td>
   </tr>
 </table>
+<br>
+<table align="center">
+  <tr align="center">
+    <td align="center"><img src="demo_qpsk.gif" width="65%" align="center"/></td>
+    <td align="center"><img src="demo_bpsk.gif" width="76%" align="center"/></td>
+  </tr>
+</table>
+<br>
 
 RFSoC Tools and SDR demonstrations include:
 * [RFSoC Spectrum Analyser](https://github.com/strath-sdr/rfsoc_sam)
