@@ -143,7 +143,7 @@ You are using the individual installer workflow and encountered the message `zip
 
 > _Resolution_ <br>
 Simply add `--no-cache-dir` at the end of the installation command. For example: <br>
-`pip3 install https://github.com/strath-sdr/pynq_agc/releases/download/v0.3/pynq_agc.tar.gz --no-cache-dir`
+`pip3 install https://github.com/strath-sdr/pynq_agc/releases/download/v0.3.1/pynq_agc.tar.gz --no-cache-dir`
 
 ## Individual Package Installation <a class="anchor" id="individual_install"></a>
 If you have a problem using the RFSoC-Studio installer, please run the following in your Jupyter Terminal.
@@ -157,14 +157,14 @@ pip3 uninstall -y rfsoc-sam rfsoc-freqplan rfsoc-ofdm rfsoc-qpsk rfsoc-radio pyn
 * Then run individual installation for each package.
 
 ```sh
-pip3 install https://github.com/strath-sdr/rfsoc_sam/archive/v0.2.2.tar.gz
-pip3 install https://github.com/strath-sdr/rfsoc_frequency_planner/archive/v0.1.0.tar.gz
-pip3 install https://github.com/strath-sdr/rfsoc_ofdm/archive/v0.2.0.tar.gz
-pip3 install https://github.com/strath-sdr/rfsoc_qpsk/archive/v1.3.0.tar.gz
-pip3 install https://github.com/strath-sdr/rfsoc_radio/archive/v0.1.0.tar.gz
-pip3 install https://github.com/strath-sdr/dsp_notebooks/archive/v0.1.0.tar.gz
-pip3 install https://github.com/strath-sdr/rfsoc_notebooks/archive/v0.1.0.tar.gz
-pip3 install https://github.com/strath-sdr/pynq_agc/releases/download/v0.3/pynq_agc.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_sam/archive/v0.3.1.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_frequency_planner/archive/v0.1.1.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_ofdm/archive/v0.2.2.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_qpsk/archive/v1.3.1.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_radio/archive/v0.1.2.tar.gz
+pip3 install https://github.com/strath-sdr/dsp_notebooks/archive/v0.1.1.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_notebooks/archive/v0.1.1.tar.gz
+pip3 install https://github.com/strath-sdr/pynq_agc/releases/download/v0.3.1/pynq_agc.tar.gz
 ```
 
 * Finally run the rfsoc-studio installer again to complete setup.
