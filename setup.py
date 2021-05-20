@@ -30,7 +30,7 @@ copy_notebooks()
 
 setup(
     name=package_name,
-    version='0.2.0',
+    version='0.2.1',
     install_requires=[
         'plotly==4.5.2',
         'pynq==2.6',
