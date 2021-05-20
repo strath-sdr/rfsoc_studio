@@ -9,30 +9,30 @@ This repository contains the RFSoC Studio installer, which will install several 
 <table border="0" align="center">
     <tr border="0">
         <td align="center" width="43.5%" border="0">
-            <img src="demo_spectrum_analyser.gif" alt="oscthumb" style="width: 100%" border="0"/>
+            <img src="notebooks/images/gif/rfsoc_sam.gif" alt="oscthumb" style="width: 100%" border="0"/>
         </td>
         <td align="center" width="50%" border="0">
-            <img src="demo_ofdm.gif" alt="oscthumb" style="width: 100%" border="0"/>
+            <img src="notebooks/images/gif/rfsoc_ofdm.gif" alt="oscthumb" style="width: 100%" border="0"/>
         </td>
     </tr>
 </table>
 <table border="0" align="center">
     <tr border="0">
         <td align="center" width="48%" border="0">
-            <img src="demo_qpsk.gif" alt="oscthumb" style="width: 100%" border="0"/>
+            <img src="notebooks/images/gif/rfsoc_qpsk.gif" alt="oscthumb" style="width: 100%" border="0"/>
         </td>
         <td align="center" width="52%" border="0">
-            <img src="demo_bpsk.gif" alt="oscthumb" style="width: 100%" border="0"/>
+            <img src="notebooks/images/gif/rfsoc_radio.gif" alt="oscthumb" style="width: 100%" border="0"/>
         </td>
     </tr>
 </table>
 <table border="0" align="center">
     <tr border="0">
         <td align="center" width="38.5%" border="0">
-            <img src="demo_agc.gif" alt="oscthumb" style="width: 100%" border="0"/>
+            <img src="notebooks/images/gif/pynq_agc.gif" alt="oscthumb" style="width: 100%" border="0"/>
         </td>
         <td align="center" width="61.5%" border="0">
-            <img src="demo_frequency_planner.gif" alt="oscthumb" style="width: 100%" border="0"/>
+            <img src="notebooks/images/gif/rfsoc_frequency_planner.gif" alt="oscthumb" style="width: 100%" border="0"/>
         </td>
     </tr>
 </table>
