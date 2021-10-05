@@ -33,7 +33,7 @@ setup(
     version='0.2.1',
     install_requires=[
         'plotly==4.5.2',
-        'pynq==2.6',
+        'pynq>=2.6',
         'rfsoc-sam @ https://github.com/strath-sdr/rfsoc_sam/archive/v0.3.1.tar.gz',
         'rfsoc-freqplan @ https://github.com/strath-sdr/rfsoc_frequency_planner/archive/v0.1.1.tar.gz',
         'rfsoc-ofdm @ https://github.com/strath-sdr/rfsoc_ofdm/archive/v0.2.2.tar.gz',
