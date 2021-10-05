@@ -12,6 +12,8 @@ pip_name = 'rfsoc-studio'
 
 data_files = []
 
+source /usr/local/share/pynq-venv/bin/activate
+
 # check whether board is supported
 def check_env():
     if board not in ['RFSoC2x2', 'ZCU111']:
