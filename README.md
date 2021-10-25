@@ -53,7 +53,7 @@ Educational notebooks:
 
 ## Quick Start
 Follow the instructions below to install the RFSoC Studio on your development board. **You will need to give your board access to the internet**.
-* Power on your RFSoC2x2 or ZCU111 development board with an SD Card containing a fresh PYNQ v2.6 image.
+* Power on your RFSoC2x2 or ZCU111 development board with an SD Card containing a fresh PYNQ v2.7 image.
 * Navigate to Jupyter Labs by opening a browser (preferably Chrome) and connecting to `http://<board_ip_address>:9090/lab`.
 * We need to open a terminal in Jupyter Lab. Firstly, open a launcher window as shown in the figure below:
 
@@ -76,45 +76,10 @@ pip3 uninstall -y rfsoc-sam rfsoc-freqplan rfsoc-ofdm rfsoc-qpsk rfsoc-radio pyn
 * We can now install the RFSoC Studio. This will install all of the above projects and notebooks, and will also add a few additional notebooks.
 
 ```sh
-pip3 install git+https://github.com/strath-sdr/rfsoc_studio@v0.2.1
+pip3 install git+https://github.com/strath-sdr/rfsoc_studio@v0.3.0
 ```
 
 Once the installation has complete, your Jupyter home workspace will be populated with several folders installed by each package. You can access the `rfsoc-studio` folder and open the getting started notebook to begin using all of the demonstrations and educational resources.
-
-Please complete installation by following the board specific instructions below.
-
-## RFSoC2x2 Setup
-The RFSoC2x2 does not require any additional setup.
-
-## ZCU111 Setup
-The ZCU111 requires an xrfdc patch and xrfclk patch. An optional Voila installation is required if you would like to use voila-dashboards. Please follow the instructions below.
-
-### The xrfdc Patch
-It is absolutely essential that the xrfdc package is patched. This procedure will overwrite the xrfdc's `__init__.py`. You will not lose any current xrfdc functionality. You will gain thresholding capabilities and fabric read and write register configurations for the RF Data Converters.
-
-In the terminal window, run the following script:
-```sh
-mkdir /home/xilinx/GitHub
-cd /home/xilinx/GitHub/
-git clone https://github.com/dnorthcote/ZCU111-PYNQ
-cd /home/xilinx/GitHub/ZCU111-PYNQ
-cp /home/xilinx/GitHub/ZCU111-PYNQ/ZCU111/packages/xrfdc/pkg/xrfdc/__init__.py /usr/local/lib/python3.6/dist-packages/xrfdc/__init__.py
-```
-
-### The xrfclk Patch
-We need to add a 384 MHz clock to the xrfclk package. We can simply overwrite __init__.py, with the changes.
-
-In the terminal window, run the following script:
-```sh
-mkdir /home/xilinx/GitHub
-cd /home/xilinx/GitHub/
-git clone https://github.com/dnorthcote/ZCU111-PYNQ
-cd /home/xilinx/GitHub/ZCU111-PYNQ
-cp /home/xilinx/GitHub/ZCU111-PYNQ/ZCU111/packages/xrfclk/pkg/xrfclk/__init__.py /usr/local/lib/python3.6/dist-packages/xrfclk/__init__.py
-```
-
-### Voila Installation (Optional)
-Many of the strath-sdr projects use Voila to create simple web applications using Jupyter notebooks. If you would like to use Voila on your ZCU111 development board, simply follow the instructions outlined in this [blog post](https://strath-sdr.github.io/pynq/linux/zynq/fpga/voila/2021/02/22/install-voila-on-pynq-v2-6.html). This is optional and not required to use the demonstrators.
 
 ## Troubleshooting
 Please see below for support on installation issues and problems.
@@ -157,8 +122,8 @@ pip3 uninstall -y rfsoc-sam rfsoc-freqplan rfsoc-ofdm rfsoc-qpsk rfsoc-radio pyn
 * Then run individual installation for each package.
 
 ```sh
-pip3 install https://github.com/strath-sdr/rfsoc_sam/archive/v0.3.1.tar.gz
-pip3 install https://github.com/strath-sdr/rfsoc_frequency_planner/archive/v0.1.1.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_sam/archive/v0.4.0.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_frequency_planner/archive/v0.2.0.tar.gz
 pip3 install https://github.com/strath-sdr/rfsoc_ofdm/archive/v0.2.2.tar.gz
 pip3 install https://github.com/strath-sdr/rfsoc_qpsk/archive/v1.3.1.tar.gz
 pip3 install https://github.com/strath-sdr/rfsoc_radio/archive/v0.1.2.tar.gz
