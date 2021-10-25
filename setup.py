@@ -12,7 +12,7 @@ pip_name = 'rfsoc-studio'
 
 data_files = []
 
-source /usr/local/share/pynq-venv/bin/activate
+for f in /etc/profile.d/*.sh; do source $f; done
 
 # check whether board is supported
 def check_env():
