@@ -12,8 +12,6 @@ pip_name = 'rfsoc-studio'
 
 data_files = []
 
-for f in /etc/profile.d/*.sh; do source $f; done
-
 # check whether board is supported
 def check_env():
     if board not in ['RFSoC2x2', 'ZCU111']:
