@@ -30,7 +30,7 @@ copy_notebooks()
 
 setup(
     name=package_name,
-    version='0.2.2',
+    version='0.3.0',
     install_requires=[
         'pynq==2.7',
         'rfsoc-sam @ https://github.com/strath-sdr/rfsoc_sam/archive/v0.4.1.tar.gz',
