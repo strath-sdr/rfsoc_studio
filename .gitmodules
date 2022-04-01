@@ -1,0 +1,21 @@
+[submodule "submodules/pynq_agc"]
+	path = submodules/pynq_agc
+	url = https://github.com/strath-sdr/pynq_agc
+[submodule "submodules/dsp_notebooks"]
+	path = submodules/dsp_notebooks
+	url = https://github.com/strath-sdr/dsp_notebooks
+[submodule "submodules/rfsoc_frequency_planner"]
+	path = submodules/rfsoc_frequency_planner
+	url = https://github.com/strath-sdr/rfsoc_frequency_planner
+[submodule "submodules/rfsoc_radio"]
+	path = submodules/rfsoc_radio
+	url = https://github.com/strath-sdr/rfsoc_radio
+[submodule "submodules/rfsoc_ofdm"]
+	path = submodules/rfsoc_ofdm
+	url = https://github.com/strath-sdr/rfsoc_ofdm
+[submodule "submodules/rfsoc_sam"]
+	path = submodules/rfsoc_sam
+	url = https://github.com/strath-sdr/rfsoc_sam
+[submodule "submodules/rfsoc_qpsk"]
+	path = submodules/rfsoc_qpsk
+	url = https://github.com/strath-sdr/rfsoc_qpsk
