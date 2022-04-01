@@ -29,7 +29,6 @@ RFSoC Tools and SDR demonstrations include:
 
 Educational notebooks:
 * [DSP Notebooks for Wireless Communications](https://github.com/strath-sdr/dsp_notebooks)
-* [RFSoC Introductory Notebooks](https://github.com/strath-sdr/rfsoc_notebooks)
 
 ## Quick Start
 Follow the instructions below to install the RFSoC Studio on your development board. **You will need to give your board access to the internet**.
