@@ -73,12 +73,12 @@ pip3 uninstall -y rfsoc-sam rfsoc-freqplan rfsoc-ofdm rfsoc-qpsk rfsoc-radio pyn
 
 ```sh
 pip3 install https://github.com/strath-sdr/rfsoc_sam/archive/v0.4.1.tar.gz
-pip3 install https://github.com/strath-sdr/rfsoc_frequency_planner/archive/v0.3.0.tar.gz
-pip3 install https://github.com/strath-sdr/rfsoc_ofdm/archive/v0.3.1.tar.gz
-pip3 install https://github.com/strath-sdr/rfsoc_qpsk/archive/v1.4.1.tar.gz
-pip3 install https://github.com/strath-sdr/rfsoc_radio/archive/v0.2.1.tar.gz
-pip3 install https://github.com/strath-sdr/dsp_notebooks/archive/v0.1.2.tar.gz
-pip3 install https://github.com/strath-sdr/pynq_agc/releases/download/v0.3.2/pynq_agc.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_frequency_planner/archive/v0.3.1.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_ofdm/archive/v0.3.2.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_qpsk/archive/v1.4.2.tar.gz
+pip3 install https://github.com/strath-sdr/rfsoc_radio/archive/v0.2.2.tar.gz
+pip3 install https://github.com/strath-sdr/dsp_notebooks/archive/v0.1.3.tar.gz
+pip3 install https://github.com/strath-sdr/pynq_agc/releases/download/v0.3.3/pynq_agc.tar.gz
 ```
 
 * Finally run the rfsoc-studio installer again to complete setup.
